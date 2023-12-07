@@ -91,7 +91,7 @@ export const getAllProductReducer = (state = initialState, action) => {
 export const getProductByIdReducer = (state = {}, action) => {
     switch (action.type) {
         case 'GET_PRODUCT_BY_ID':{
-            return {...state, product: action.payload}
+            return {...state, product: action.payload}//cập nhật hoặc thêm một thuộc tính có tên product 
         }
 
         case 'REMOVE_PRODUCT_BY_ID':{

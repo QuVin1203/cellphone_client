@@ -3,7 +3,7 @@ export const CartReducer = (state = {cartItems: []}, action) => {
     switch (action.type) {
         case 'ADD_TO_CART': {
             let newList = [...state.cartItems]
-            const exists = newList.find(item => item._id === action.payload._id)
+            const exists = newList.find(item => item._id === action.payload._id)//kiem tra sp đã tồn tại hay chưa
             if (exists) {
                 newList = newList.map((item) => item._id === action.payload._id ? { ...exists, qty: exists.qty + 1 } : item)
             }else{

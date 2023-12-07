@@ -43,7 +43,7 @@ function Order(props) {
   };
 
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const totalPrice = cartItems.reduce(
+  const totalPrice = cartItems.reduce(//tính tổng giá san phảm
     (total, item) => total + item.qty * item.salePrice,
     0
   );
@@ -107,7 +107,7 @@ function Order(props) {
             <div className="form-customer">
               <input
                 placeholder="Họ và tên"
-                {...register("name")}
+                {...register("name")}//register được sử dụng để liên kết trường dữ liệu với trạng thái của form.
                 required
               ></input>
               <input

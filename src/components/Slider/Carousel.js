@@ -4,6 +4,7 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -68,19 +69,20 @@ function Carousel(props) {
                     ref={slider => (slider1 = slider)} 
                     {...settings} >
               <div key={1}>
-                <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/loa-691-301-max.png"></img>
+                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/690-300-max-iphone15-promax-th1102.jpg"></img>
+                
               </div>
               <div key={2}>
-                <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/1380-600-max.png"></img>
+                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/sliding-dienthoai-xiaomi-13c.jpg"></img>
               </div>
               <div key={3}>
-                <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/ip11-tg-690-300-max.png"></img>
+                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/sliding-sinhvien-rogphone.png"></img>
               </div>
               <div key={4}>
-                <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/dd690x300_XR.png"></img>
+                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/gia-dung-bear-sliding.png"></img>
               </div>
               <div key={4}>
-                <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/se-aw-690-300-max.png"></img>
+                <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:80/plain/https://dashboard.cellphones.com.vn/storage/jbl-authentics-series-01-12-2023.jpg"></img>
               </div>
             </Slider>
             <div className='carousel-left-move' onClick={() => previous()}>
@@ -101,16 +103,16 @@ function Carousel(props) {
                      >
               
               <div>
-                TRỢ GIÁ MÙA DỊCH <br></br> Ưu đãi vô địch
+                IPHONE 15 SERIES <br></br> Sẵn sàng mua ngay
               </div>
               <div>
-                NOTE 20 ULTRA 5G  <br></br>  Hotsale giảm sập sàn
+                XIAOMI REDMI 13C  <br></br>  Hotsale giảm sập sàn
               </div>
               <div>
-              XR CHÍNH HÃNG  <br></br>  Giá mới cực tốt
+              ROG PHONE  <br></br>  Giá mới cực tốt
               </div>
               <div>
-              APPLE WATCH SE  <br></br>  Mua đi chờ chi
+              GIA DỤNG BEAR  <br></br>  Mua đi chờ chi
               </div>
               <div>
               ĐẠI TIỆC ÂM THANH   <br></br>   Loa sale bung nóc
@@ -121,13 +123,13 @@ function Carousel(props) {
         </div>
         <div className="carousel-right">
           <div className="carousel-right-item">
-            <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/RB_S21.png"></img>
+            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/m14.png"></img>
           </div>
           <div className="carousel-right-item">
-            <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/iPhone_12_690x300_copyssspng.png"></img>
+            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2023/11/banner/Vivo-Y17s-720-220-720x220-3.png"></img>
           </div>
           <div className="carousel-right-item">
-            <img src="https://cdn.cellphones.com.vn/media/ltsoft/promotion/11lite-690-300-max.png"></img>
+            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:690:300/q:10/plain/https://dashboard.cellphones.com.vn/storage/rb%20laptop.png"></img>
           </div>
         </div>
       </div>

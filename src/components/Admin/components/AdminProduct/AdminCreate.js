@@ -29,14 +29,14 @@ function AdminCreate(props) {
     dispatch(getAllTypeProduct());
   }, [dispatch]);
 
-  const handleFileImageChange = (e) => {
+  const handleFileImageChange = (e) => {//xử lí thay đổi hình ảnh
     setImage(e.target.files[0]);
   };
 
   const onSubmit = async (data) => {
     let formData = new FormData();
 
-    formData.append("name", data.name);
+    formData.append("name", data.name);//append để thêm  các trường dữ liệu vào formData.
     formData.append("price", data.price);
     formData.append("amount", data.amount);
     formData.append("salePrice", data.salePrice);
@@ -62,7 +62,7 @@ function AdminCreate(props) {
       className={
         activeTypeProduct === item.name
           ? `filter-menu-firm-item active`
-          : "filter-menu-firm-item"
+          : "filter-menu-firm-item"// Nếu activeTypeProduct (loại sản phẩm đang được chọn) trùng với item.name, thì mục này sẽ có class "active".
       }
       onClick={() => HandleFilterProductByType(item.name)}
     >

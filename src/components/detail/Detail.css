@@ -7,28 +7,71 @@
     margin: auto;
     padding-top: 1rem;
 }
+.blog{
+    border: 2px solid #eee;
+    display: block;
+    margin-bottom: 15px;
+    margin-right: auto;
+    border-radius: 10px;
+    min-height: 0;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+
+}
+.rate{
+    border: 2px solid #eee;
+}
 .detail-title{
     text-align: left;
     padding: .5rem 0;
+    color: #0a263c;
+   
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    margin: 0 10px 0 0;
 }
 .detail-info{
     display: flex;
 }
 .detail-info-slide-image {
-    border: 1px solid #eee;
+    border: 2px solid #eee;
     padding: 1rem 0;
+    border-radius: 10px;
+
+   
+
+   
 }
 .detail-info-slide-image img{
     max-width: 350px;
+    border-radius: 10px;
+
+    
+  
 }
 .detail-info-right {
     padding-left: 1rem;
+    height: 400px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5
+    
 }
-
+.detail-info-picture-advertisement img {
+    max-width: 440px;
+    padding-top: 0.5rem;
+    height: 80px;
+    border-radius: 10px;
+    
+}
 .detail-info-right-price {
     background-color: #eee;
     border-radius: 7px;
     padding: 1rem;
+    height: 160px;
 }
 .detail-intro table{
     border: none;
@@ -43,6 +86,7 @@
 .price-box {
     display: flex;
     line-height: 30px;
+    justify-content: center;
 }
 
 .saleprice {
@@ -68,20 +112,24 @@
     color: #444;
 }
 
+
 .detail-info-right-buy-now a {
     background: linear-gradient(#f52f32, #e11b1e);
+
     border: solid 1px #e11b1e;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #fff;
     font-size: 14px;
     padding: 8px 5px;
     line-height: 18px;
     width: 100%;
-    border-radius: 5px;
+    height: 60px;
+    border-radius: 10px;
     display: block;
-    text-align: center;
+   text-align: center;
     cursor: pointer;
     font-weight: 700;
+    line-height: 40px;
 }
 
 .detail-info-right-buy-now a:hover {
@@ -92,6 +140,7 @@
 
 .detail-info-right-buy-installment {
     display: flex;
+    border-radius: 10px;
 }
 
 .detail-info-right-buy-installment a {

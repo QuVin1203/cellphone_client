@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Chart from "react-apexcharts";
+import Chart from "react-apexcharts";//thư viện biểu đồ
 import { useDispatch, useSelector } from "react-redux";
 import { getAllOrder } from "../../../../actions/OrderAction";
 

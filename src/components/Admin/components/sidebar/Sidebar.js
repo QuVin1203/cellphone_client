@@ -13,8 +13,8 @@ import {
 
 function Sidebar(props) {
   const dispatch = useDispatch();
-  const location = useLocation()
-  const { orderPendding } = useSelector((state) => state.allOrder);
+  const location = useLocation()//hook để lấy ra thông tin về địa chỉ (URL) hiện tại.
+  const { orderPendding } = useSelector((state) => state.allOrder);//để lấy ra thông tin về danh sách đơn hàng chưa xử lý từ store Redux.
   let totalNewOrder
   
   if(orderPendding){
@@ -63,12 +63,7 @@ function Sidebar(props) {
               </div>
           </p>
         </Link>
-        {/* <Link to="/admin/chat" className={location.pathname === '/admin/chat' ? 'sidebar-list-item active': 'sidebar-list-item'}>
-          <span>
-            <WechatOutlined></WechatOutlined>
-          </span>
-          <p>Chat</p>
-        </Link> */}
+        
       </div>
     </div>
   );

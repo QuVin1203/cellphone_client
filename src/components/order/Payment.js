@@ -106,6 +106,30 @@ export default function Payment() {
         ""
       )}
 
+
+
+
+
+
+
+
+
     </div>
   );
 }
+/*
+      {choosePay.payOnline ? (
+        <button type="submit" className="paypal">
+          
+          <VnPay></VnPay>
+          <PayPalButton
+            className="paypal-btn"
+            style={{ color: "white", marginTop: '1rem' }}
+            amount={1}
+            onSuccess={successPaymentHandler}
+          ></PayPalButton>
+        </button>
+      ) : (
+        ""
+      )}
+      */

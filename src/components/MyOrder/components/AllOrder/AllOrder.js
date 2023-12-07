@@ -40,9 +40,11 @@ function AllOrder(props) {
   }, []);
 
   return (
-    <div className="all-myorder">
-      {myOrders && myOrders.length > 0 ? myOrders.map((item) => orderParent(item)) : "Bạn không có đơn hàng nào"}
-    </div>
+    ("")
+    //
+    //<div className="all-myorder">
+   //   {myOrders && myOrders.length > 0 ? myOrders.map((item) => orderParent(item)) : "Bạn không có đơn hàng nào"}
+    //</div>
   );
 }
 

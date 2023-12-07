@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 
 function Xiaomi(props) {
     const dispatch = useDispatch()
-    const [name, setName] = useState('xiaomi');
+    const [name, setName] = useState('vivo');
     const [hotXiaomi, setHotXiaomi] = useState([])
 
     useEffect(() => {

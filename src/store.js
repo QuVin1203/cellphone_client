@@ -5,7 +5,7 @@ import {getProductByTypeReducer, getAllProductReducer, getProductByIdReducer, pa
 
 import { CartReducer} from './reducers/CartReducer'
 import { addressReducer, getAllOrderReducer, getOrderByUserReducer, OrderInfoReducer, orderPayReducer } from './reducers/OrderReducer'
-import { ChatReducer } from './reducers/ChatReducer'
+
 import { SelectListReducer, UpdateSelectListReducer } from "./reducers/SelectListReducer";
 import { ListTypeProductReducer, TypeProductReducer } from './reducers/ListTypeProductReducer'
 import { InfoGhnReducer } from './reducers/GhnReducer'
@@ -46,7 +46,7 @@ const reducer = combineReducers({
 
   orderGhn: InfoGhnReducer,
 
-  chat: ChatReducer,
+ 
 
   selectList: SelectListReducer,
   updateSelect: UpdateSelectListReducer,
@@ -55,7 +55,7 @@ const reducer = combineReducers({
   detailType: TypeProductReducer,
 });
 
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;//Dòng này cho phép Redux DevTools mở rộng có thể được sử dụng để theo dõi và gỡ lỗi ứng dụng.
 
 const store = createStore(reducer,initialState, composeEnhancer(applyMiddleware(thunk)));
 

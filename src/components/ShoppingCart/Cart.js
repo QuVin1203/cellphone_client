@@ -21,7 +21,7 @@ function Cart(props) {
       if (userInfo) {
         history.push("/order");
       } else {
-        alert("ban can dang nhap");
+        alert("Vui lòng đăng nhập");
         history.push("/login");
       }
     };
@@ -32,6 +32,7 @@ function Cart(props) {
           <div className="shopping-cart-header">
             <Link to="/" className="back">
               {/* <BsChevronDoubleLeft></BsChevronDoubleLeft> */}
+           
               Tiếp tục mua hàng
             </Link>
             <h2 className="shopping-cart-title">Giỏ hàng</h2>

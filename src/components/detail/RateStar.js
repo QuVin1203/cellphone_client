@@ -17,14 +17,14 @@ function RateStar(props) {
     const {userInfo} = useSelector(state => state.userSignin)
     const product = useSelector(state => state.getProductById.product)
     
-    const countReview = product.reviews.length
-    let averageRate = Math.round(product.reviews.reduce((a,c) => a + c.star, 0) / countReview)
+    const countReview = product.reviews.length//số lượng đánh giá
+    let averageRate = Math.round(product.reviews.reduce((a,c) => a + c.star, 0) / countReview)//Tính sô lượng đánh giá
 
     if(userInfo) {
-        var existsUser = product.reviews.find(x => x.name == userInfo.name)
+        var existsUser = product.reviews.find(x => x.name == userInfo.name)//nếu userinfo tồn tại thì tìm trong review của product có name=name
     }
     
-    const fiveStar = Math.round(product.reviews.filter(x => x.star === 5).length / countReview * 100)
+    const fiveStar = Math.round(product.reviews.filter(x => x.star === 5).length / countReview * 100)//tính rate số sao
     const fourStar = Math.round(product.reviews.filter(x => x.star === 4).length / countReview * 100)
     const threeStar = Math.round(product.reviews.filter(x => x.star === 3).length / countReview * 100)
     const twoStar = Math.round(product.reviews.filter(x => x.star === 2).length / countReview * 100)
@@ -48,7 +48,7 @@ function RateStar(props) {
     return (
         
         <div className="">
-            <Row>
+            <Row>{/**tạo một hàng trong hệ thống lưới (grid system) của Ant Design */}
                 <Col span={18} xs={24} sm={24} md={24} style={{minWidth:'100%'}}>
                     <span className="rate-star-title">{product.reviews.length} Đánh giá {product.name}</span>
                 </Col>
@@ -90,7 +90,7 @@ function RateStar(props) {
                         {
                             existsUser ? '' : (
                         <Col span={7} style={{display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
-                            <button className='guidanhgia' onClick={() => {userInfo ? setShowRate(true) : alert('Đăng nhập đi bạn eii')}}> Gửi đánh giá </button>
+                            <button className='guidanhgia' onClick={() => {userInfo ? setShowRate(true) : alert('Vui lòng đăng nhập')}}> Gửi đánh giá </button>
                         </Col>)
                         }
                     </Row>

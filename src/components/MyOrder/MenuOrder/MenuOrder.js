@@ -26,7 +26,7 @@ function MenuOrder(props) {
   return (
     <div className="myorder-menu">
       <div className={location.pathname === '/myOrder' ? 'myorder-menu-item active' : 'myorder-menu-item'}>
-        <Link to={'/myOrder' }>Tất cả</Link>
+        <Link to={'/myOrder' }>Menu</Link>
       </div>
       <div className={location.pathname === '/myOrder/pendding' ? 'myorder-menu-item active' : 'myorder-menu-item'}>
         <Link to="/myOrder/pendding">Chờ xử lí</Link>

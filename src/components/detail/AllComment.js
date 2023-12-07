@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 import AllRepComment from "./AllRepComment";
 import { getFirstCharacterUser } from "../../untils";
 
+
 function AllComment(props) {
   const { id } = useParams();
   const { allComment } = props;
@@ -31,7 +32,7 @@ function AllComment(props) {
       dispatch(repCommentProduct(id, comment));
       setRepValue("");
       setRepCmt({ key: "", status: false });
-    } else alert("Đăng nhập đi bạn eiii");
+    } else alert("Vui lòng đăng nhập");
   };
 
   const PinComment = (comment) => {
@@ -52,7 +53,7 @@ function AllComment(props) {
                   </div>
                 ) : (
                   <div className="all-comment-info-name">
-                    {getFirstCharacterUser(comment.author)}
+                    {getFirstCharacterUser(comment.author)}{/*lấy kí tự đầu tên user để làm logo*/ }
                   </div>
                 )}
                 {comment.isAdmin ? (
@@ -71,7 +72,7 @@ function AllComment(props) {
                     onClick={() => PinComment(comment)}
                   >
                     {
-                      comment.status === 'pin' ? (<LockOutlined></LockOutlined>) : (<PushpinOutlined></PushpinOutlined>) 
+                      comment.status === 'pin' ? (<LockOutlined></LockOutlined>) : (<PushpinOutlined></PushpinOutlined>) //*hiện icon ghim*/ 
                     }
                   </div>
                 </div>

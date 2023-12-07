@@ -4,20 +4,21 @@ import DetailInfo from './DetailInfo'
 import RateStar from './RateStar';
 import {
     useParams
-} from "react-router-dom";
+} from "react-router-dom";//để lấy tham số id từ URL
 import { useDispatch, useSelector } from 'react-redux';
 import { getproductById } from '../../actions/ProductAction';
 import CommentProduct from './CommentProduct';
 import BlogContent from './BlogContent';
+import  Footer  from '../footer/Footer'
 
 function Detail(props) {
     const dispatch = useDispatch()
     const { id } = useParams();
-    const detailProduct = useSelector(state => state.getProductById.product)
+    const detailProduct = useSelector(state => state.getProductById.product)//lấy dữ liệu từ redux store
 
-    useEffect(() => {
+    useEffect(() => {//gọi action từ redux store
         dispatch(getproductById(id))
-    }, [dispatch])
+    }, [dispatch])//useEffect sẽ chạy mỗi khi [dispatch]thay đổi ,denpen..
 
     return (
         <section id="detail">
@@ -33,7 +34,10 @@ function Detail(props) {
                             <img src={detailProduct.image}></img>
                         </div>
                     </div>
-                    <DetailInfo  product={detailProduct}></DetailInfo>
+                    <DetailInfo  product={detailProduct}></DetailInfo>{/**truyền props product vào 
+                     * trong component DetailInfo, bạn có thể truy cập vào prop product để sử dụng giá trị của detailProduct.
+                    */}
+                    
                 </div>
                 <div>
                     <BlogContent></BlogContent>
@@ -44,6 +48,10 @@ function Detail(props) {
                 <div>
                     <CommentProduct></CommentProduct>
                 </div>
+                <div>
+                    <Footer></Footer>
+                </div>
+              
                 
             </div>
             ) : ''

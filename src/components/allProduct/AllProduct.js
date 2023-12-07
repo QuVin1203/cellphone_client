@@ -12,7 +12,7 @@ import SortByPrice from './SortByPrice/SortByPrice';
 function AllProduct(props) {
     const dispatch = useDispatch()
     
-    const product = useSelector(state => state.allProduct.product)
+    const product = useSelector(state => state.allProduct.product)//Selector lấy dữ liệu từ store
 
     useEffect(() => {
         dispatch(getAllProduct())
@@ -27,6 +27,7 @@ function AllProduct(props) {
             <div className="hotsale">
                 <FilterProduct></FilterProduct>
                 <SortByPrice></SortByPrice>
+                
                 {
                    product && product.length > 0 ? (<ListProduct HotSaleProducts={handlePercentDiscount(product)}></ListProduct>) : (<span>Không có sản phẩm</span>)
                 }

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Product from './Product'
+import './Product.css'
 
 function ListProduct(props) {
     const {HotSaleProducts} = props;

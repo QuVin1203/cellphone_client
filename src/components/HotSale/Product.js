@@ -4,6 +4,7 @@ import {AddToCart} from '../../actions/CartAction'
 import {Link} from 'react-router-dom'
 import {formatPrice} from '../../untils/index'
 import { message} from 'antd';
+//import './Product.css'
 
 function Product(props) {
     const { product } = props;

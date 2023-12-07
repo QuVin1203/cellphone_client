@@ -8,19 +8,24 @@ import AdminOrderAll from "./AdminOrderAll/AdminOrderAll";
 function AdminOrder(props) {
 
   return (
+    
     <Router>
       <div className="order">
         <span>Orders</span>
-        <AdminOrderMenu></AdminOrderMenu>
+          <AdminOrderMenu></AdminOrderMenu>
 
         <Switch>
           <Route path="/admin/order" exact component={AdminOrderAll}>
           </Route>
          
         </Switch>
+        
       </div>
-    </Router>
-  );
-}
+      
+    </Router> 
+   
+   
+  );}
+  
 
 export default AdminOrder;

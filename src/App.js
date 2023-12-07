@@ -11,7 +11,7 @@ import SearchPage from './pages/SearchPage';
 import AdminPage from './pages/AdminPage';
 import ResetScroll from './components/ResetScroll/ResetScroll';
 import MyOrderPage from './pages/MyOrderPage';
-import ChatPage from './pages/ChatPage';
+
 import PaymentPage from './pages/PaymentPage';
 import OrderSuccessPage from './pages/OrderSuccessPage'
 
@@ -62,9 +62,7 @@ function App() {
           <SearchPage></SearchPage>
         </Route>
 
-        <Route path='/chat'>
-          <ChatPage></ChatPage>
-        </Route>
+        
 
         <Route path='/admin'>
           <AdminPage></AdminPage>

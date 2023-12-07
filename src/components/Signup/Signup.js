@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import {SignupUser} from '../../actions/UserAction'
+import { ArrowLeftOutlined } from '@ant-design/icons';
+import { Link } from "react-router-dom";
 
 function Login(props) {
     const dispatch = useDispatch()
@@ -13,15 +15,16 @@ function Login(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
     const onSubmit = data => {
         if(password === confirmPassword) {
-            dispatch(SignupUser(data))            
+            dispatch(SignupUser(data))       //gửi action đến hàm SignupUser     
         } else{
-            alert("wrong repeat password")
+            alert("Wrong repeat password")
         }
     }
   
     return (
       <div className="signup-page">
-        <h2>ĐĂNG KÍ</h2>
+        <h2  style={{ marginTop: '10px' }}><Link to ="./login">< ArrowLeftOutlined style={{ fontSize: "24px",color:'black', marginRight: '10px'  }} /></Link>ĐĂNG KÍ</h2>
+       
         <form onSubmit={handleSubmit(onSubmit)} classname="form-signup">
           <input {...register("name")} placeholder="Name" required></input>
           <input
@@ -29,7 +32,7 @@ function Login(props) {
             placeholder="Email"
             type="email"
             required
-          ></input>
+          >{errors.email && <p>{errors.email.message}</p>}</input>
           <input
             {...register("password")}
             placeholder="Password"
