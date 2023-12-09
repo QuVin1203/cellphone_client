@@ -17,7 +17,7 @@ function Login(props) {
         if(password === confirmPassword) {
             dispatch(SignupUser(data))       //gửi action đến hàm SignupUser     
         } else{
-            alert("Wrong repeat password")
+            alert("Xác nhận lại mật khẩu không đúng !!")
         }
     }
   

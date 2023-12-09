@@ -45,7 +45,7 @@ function Header(props) {
       <section id="menu">
         <div className="logo">
           <span>
-            <img className="logo-img" src="https://brademar.com/wp-content/uploads/2022/10/CellphoneS-Logo-PNG-2.png" alt="Logo" /> 
+            <img className="logo-img" src="https://dongphucvina.vn/wp-content/uploads/2023/08/Emagine-Logo-_-Real-Company-_-Alphabet-Letter-E-Logo.png" alt="Logo" /> 
             <Link to="/"> E-PHONES </Link>
           </span>
         </div>

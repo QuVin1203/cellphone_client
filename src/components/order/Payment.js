@@ -94,7 +94,7 @@ export default function Payment() {
       {choosePay.payOnline ? (
         <button type="submit" className="paypal">
           
-          <VnPay></VnPay>
+          
           <PayPalButton
             className="paypal-btn"
             style={{ color: "white", marginTop: '1rem' }}
