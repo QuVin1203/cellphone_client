@@ -1,2 +1,1 @@
-# CLone Shop CellPhones
 
