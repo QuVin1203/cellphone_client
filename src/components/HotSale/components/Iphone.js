@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 
 function Iphone(props) {
     const dispatch = useDispatch()
-    const [name, setName] = useState('iphone');
+    const [name, setName] = useState('Iphone');
     const [hotIphone, setHotIphone] = useState([])
     useEffect(() => {
         async function FetchApi(){

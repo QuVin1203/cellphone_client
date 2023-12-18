@@ -8,7 +8,7 @@ import { useDispatch} from 'react-redux';
 
 function Samsung(props) {
     const dispatch = useDispatch()
-    const [name, setName] = useState('samsung');
+    const [name, setName] = useState('SamSung');
     const [hotSamsung, setHotSamsung] = useState([])
 
     useEffect(() => {
